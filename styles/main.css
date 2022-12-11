@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+.container {
+  margin: 5rem auto;
+  max-width: 50rem;
+}
+
+/* Confirmation banner */
+
+.confirmation-banner {
+  background-color: rgba(191, 236, 188, 0.4);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+i,
+output,
+span {
+  color: rgba(38, 166, 91, 1);
+  font-weight: bold;
+  font-size: 25px;
+  padding: 2px 0;
+}
+
+.confirmation-banner > i,
+.confirmation-banner > output {
+  justify-self: start;
+  padding-left: 10px;
+}
+
+.confirmation-banner > span {
+  justify-self: end;
+  padding-right: 20px;
+}
+
+.visibileBanner {
+  visibility: hidden;
+}
+
+/* Form */
+
+.form-container > form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2px;
+  border: #000 solid 1px;
+  padding: 25px 20px 20px 35px;
+  max-height: 30rem;
+}
+
+img {
+  width: 100%;
+  height: 27rem;
+}
+
+input,
+textarea {
+  border: 1px solid #000;
+  font-weight: bold;
+}
+
+.form-input-fn > input,
+.form-input-ln > input {
+  width: 85%;
+  height: 30px;
+}
+
+input[name='firstName'] {
+  margin-bottom: 2rem;
+}
+
+.form-input-message > textarea {
+  width: 85%;
+  height: 9rem;
+  margin-top: 2rem;
+}
+
+::placeholder {
+  font-size: 15px;
+}
+
+p,
+.form-input-gender > label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form-input-gender {
+  accent-color: black;
+  font-size: 8px;
+  position: relative;
+  right: -65px;
+  top: -8px;
+}
+
+section > footer {
+  display: grid;
+  justify-items: end;
+  width: 85%;
+  padding-top: 44px;
+}
+
+footer > button {
+  background-color: rgb(27, 163, 156);
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 16px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Border colour red for inputs if the user doesn't complete all form's fields  */
+.invalid {
+  border: red solid 2px;
+}
+
+/* Responsive web design */
+
+@media only screen and (max-width: 600px) {
+  .confirmation-banner {
+    margin-bottom: 10px;
+  }
+
+  i,
+  output,
+  span {
+    font-size: 10px;
+    padding: 2px 0;
+  }
+
+  .confirmation-banner > span {
+    padding-right: 10px;
+  }
+
+  .form-container > form {
+    padding: 25px 10px 20px 35px;
+  }
+
+  img {
+    height: 17rem;
+  }
+
+  .form-input-fn > input,
+  .form-input-ln > input {
+    height: 20px;
+  }
+
+  input[name='firstName'] {
+    margin-bottom: 1rem;
+  }
+
+  .form-input-message > textarea {
+    height: 5rem;
+    margin-top: 1rem;
+  }
+
+  ::placeholder {
+    font-size: 10px;
+  }
+
+  p,
+  .form-input-gender > label {
+    font-size: 10px;
+  }
+
+  .form-input-gender {
+    right: -35px;
+    top: -8px;
+  }
+
+  section > footer {
+    padding-top: 24px;
+  }
+
+  footer > button {
+    font-size: 10px;
+  }
+}
